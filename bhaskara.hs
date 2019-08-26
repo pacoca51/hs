@@ -8,12 +8,12 @@ e maior. Se a equação não tiver raízes, as funções
 deverão retornar error.
 -}
 
-funcaoQuadrada a b c | delta >= 0   = (raizMaior, raizMenor)
-                     | otherwise   = (-1,-1)
-                     where
-                     	delta = b^2 - 4*a*c
-                        raizMaior = (negate b + sqrt(delta)) / (2*a)
-                        raizMenor = (negate b - sqrt(delta)) / (2*a)
+grau2 a b c | delta >= 0 = (r1,r2)
+            | otherwise = (-1,-1)
+            where
+               delta = b^2 - 4*a*c
+               r1 = (negate b + sqrt(delta)) / (2*a)
+               r2 = (negate b - sqrt(delta)) / (2*a)
 
 
 {-
