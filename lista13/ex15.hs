@@ -1,6 +1,3 @@
-qSort :: Ord a => [a] -> [a]
+qSort :: (Ord a) => [a] -> [a]
 qSort [] = []
-qSort (x:xs) = qSort maior ++ [x] ++ qSort menor
-    where
-        menor  = filter (< x) xs
-        maior = filter (> x) xs
+qSort (s:xs) = qSort [x|x <- xs,x > s] ++ [s] ++ qSort [x|x <- xs,x < s]
