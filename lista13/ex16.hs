@@ -1,0 +1,1 @@
+sublist x y = x == [x | x <- x, elem x y]
