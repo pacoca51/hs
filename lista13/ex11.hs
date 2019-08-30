@@ -5,6 +5,6 @@ f x y
     | x == y = x
 
 menor :: [Int] -> Int
-menor [] = 0
+menor [] = undefined
 menor [x] = x
 menor (x:xs) = f x (menor xs)
