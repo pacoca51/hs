@@ -1,8 +1,5 @@
 mdc :: Int -> Int -> Int
-mdc a b
-    | a == 0 = b
+mdc a b 
     | b == 0 = a
-    | modAB == 0 = b
-    | otherwise = mdc b modAB
-    where
-        modAB = mod a b
+    | a > b = (mdc (a-b) b)
+    | otherwise = mdc a (mod a b)
