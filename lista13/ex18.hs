@@ -1,7 +1,6 @@
 remdup :: [String] -> [String]
 remdup xs = [x | (x,y) <- zip xs [0..], notElem x (take y xs)]
 
-
 listToStr :: String -> [String] -> String
 listToStr s [] = []
 listToStr s [x] = "(" ++ s ++ x ++ ") "
