@@ -16,8 +16,8 @@ anag xs = [ x:ys | (x,a) <- select xs, ys <- anag a]
 lToS :: [String] -> String
 lToS a = (listToStr ((head a) ++ " -> ") a)
 
-anagram :: Int -> [String] -> String
-anagram _ [] = []
-anagram a b
-    | (length (head b)) == a = lToS(remdup(anag (head b))) ++ (anagram a (tail b))
-    | otherwise = (anagram a (tail b))
+anagrams :: Int -> [String] -> String
+anagrams _ [] = []
+anagrams a b
+    | (length (head b)) == a = lToS(remdup(anag (head b))) ++ (anagrams a (tail b))
+    | otherwise = (anagrams a (tail b))
