@@ -6,6 +6,6 @@ type Git = (Username,Host,Repository)
 git :: Git
 git = ("pacoca51","github.com","hs")
 
-account (u,h,_) = u++"@"++h
+account (u,h,r) = u++"@"++h
 https (u,h,r) = h++"/"++u++"/"++r
-repo (u,_,r) = u++"/"++r
+repo (u,h,r) = u++"/"++r
